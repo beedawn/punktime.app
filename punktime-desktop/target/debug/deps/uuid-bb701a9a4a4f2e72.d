@@ -1,0 +1,12 @@
+/Users/beeschmersal/GitHub/punktime.app/punktime-desktop/target/debug/deps/libuuid-bb701a9a4a4f2e72.rmeta: /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/lib.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/builder.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/error.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/parser.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/fmt.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/timestamp.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/external.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/macros.rs
+
+/Users/beeschmersal/GitHub/punktime.app/punktime-desktop/target/debug/deps/uuid-bb701a9a4a4f2e72.d: /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/lib.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/builder.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/error.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/parser.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/fmt.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/timestamp.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/external.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/macros.rs
+
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/lib.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/builder.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/error.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/parser.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/fmt.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/timestamp.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/external.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.6.1/src/macros.rs:

@@ -1,0 +1,10 @@
+/Users/beeschmersal/GitHub/punktime.app/punktime-desktop/target/debug/deps/libfutures_lite-e5ea4f942f566274.rmeta: /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/lib.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/future.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/prelude.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/stream.rs
+
+/Users/beeschmersal/GitHub/punktime.app/punktime-desktop/target/debug/deps/libfutures_lite-e5ea4f942f566274.rlib: /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/lib.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/future.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/prelude.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/stream.rs
+
+/Users/beeschmersal/GitHub/punktime.app/punktime-desktop/target/debug/deps/futures_lite-e5ea4f942f566274.d: /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/lib.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/future.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/prelude.rs /Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/stream.rs
+
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/lib.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/future.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/prelude.rs:
+/Users/beeschmersal/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-lite-2.1.0/src/stream.rs:
