@@ -1,5 +1,5 @@
 [package]
-name = "punktime"
+name = "punktime-desktop"
 version = "0.1.0"
 edition = "2021"
 
