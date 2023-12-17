@@ -10,8 +10,17 @@ fn main() {
 // define a component that renders a div with the text "Hello, world!"
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
-        div {
-            "Hello, world!"
+        body{
+        background_color:"yellow",
+        height:"550px",
+        width:100,
+        div 
+        {
+            background_color:"green",
+            h1{"Welcome to Punktime!"}
         }
+        div{
+            p{"Testing"}
+        }}
     })
 }
