@@ -8,7 +8,13 @@ fn main() {
 }
 
 // define a component that renders a div with the text "Hello, world!"
-fn App(cx: Scope) -> Element {
+fn App(cx: Scope) -> Element 
+
+{
+
+
+     let pw = use_state(cx, || "".to_string());
+     let name = use_state(cx, || "".to_string());
     cx.render(rsx! {
         body{
         background_color:"yellow",
@@ -18,9 +24,31 @@ fn App(cx: Scope) -> Element {
         {
             background_color:"green",
             h1{"Welcome to Punktime!"}
+            h2{"{name}"}
+            h2{"{pw}"}
         }
         div{
             p{"Testing"}
+           div{"Username: " input{
+            value: "{name}",
+            oninput: move|evt| name.set(evt.value.clone()),
+
+
+                }
+           }
+
+           div {
+
+            "Password: "
+                input{
+                    value:"{pw}",
+                    oninput: move |evt| pw.set(evt.value.clone()),
+                }
+
+           }
+
+
+
         }}
     })
 }
