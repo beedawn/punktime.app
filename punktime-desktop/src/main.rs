@@ -17,7 +17,7 @@ fn App(cx: Scope) -> Element
      let name = use_state(cx, || "".to_string());
     cx.render(rsx! {
         body{
-        background_color:"yellow",
+        background_color:"",
         height:"550px",
         width:100,
         div 
@@ -27,10 +27,33 @@ fn App(cx: Scope) -> Element
             h2{"{name}"}
             h2{"{pw}"}
         }
-        div{
-            p{"Testing"}
+     
+
+        Login{
+        name:name.to_string(),
+        pw:pw.to_string()}
+
+
+
+
+        }
+    })
+}
+
+
+#[derive(PartialEq,Props)]
+struct LoginCreds{
+    name: String,
+    pw: String,
+}
+fn Login(cx: Scope<LoginCreds>) -> Element {
+  let pw = use_state(cx, || "".to_string());
+     let name = use_state(cx, || "".to_string());
+    cx.render(rsx!(
+     div{
+            
            div{"Username: " input{
-            value: "{name}",
+            value: "{cx.props.name}",
             oninput: move|evt| name.set(evt.value.clone()),
 
 
@@ -41,7 +64,7 @@ fn App(cx: Scope) -> Element
 
             "Password: "
                 input{
-                    value:"{pw}",
+                    value:"{cx.props.pw}",
                     oninput: move |evt| pw.set(evt.value.clone()),
                 }
 
@@ -49,6 +72,9 @@ fn App(cx: Scope) -> Element
 
 
 
-        }}
-    })
+        }))
+
+
+
+
 }
