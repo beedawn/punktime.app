@@ -1,0 +1,10 @@
+/Users/bee/GitHub/punktime.app/punktime-desktop/target/debug/deps/libdioxus_interpreter_js-8e4e86c2924abf1f.rmeta: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/../README.md /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./interpreter.js /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./common.js
+
+/Users/bee/GitHub/punktime.app/punktime-desktop/target/debug/deps/libdioxus_interpreter_js-8e4e86c2924abf1f.rlib: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/../README.md /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./interpreter.js /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./common.js
+
+/Users/bee/GitHub/punktime.app/punktime-desktop/target/debug/deps/dioxus_interpreter_js-8e4e86c2924abf1f.d: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/../README.md /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./interpreter.js /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./common.js
+
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/lib.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/../README.md:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./interpreter.js:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dioxus-interpreter-js-0.4.3/src/./common.js:
