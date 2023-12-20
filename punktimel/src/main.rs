@@ -21,7 +21,7 @@ fn App() -> impl IntoView {
 
  <Show
     when=move || auth.get() == false
-    fallback=|| view! {  <LoggedIn />}
+    fallback=move || view! {  <LoggedIn auth=auth set_auth=set_auth />}
   >
    <div style="
     width:350px;
@@ -50,7 +50,7 @@ let (name, set_name) = create_signal(String::new());
 let (pw, set_pw) = create_signal(String::new());
 view!{
 
-  <div style="height:125px;font-family:sans-serif;font-size:14px;padding:25px;border-width:5px;border:solid;">
+  <div style="height:125px;font-family:sans-serif;font-size:14px;padding:25px;border-width:3px;border:solid;">
    <div style="padding:10px 15px">Username:  <input type="text" on:input=move |ev| { set_name(event_target_value(&ev));} prop:value=name /></div>
     
    <div style="padding:10px 15px;">Password:  <input type="password" on:input=move |ev| {set_pw(event_target_value(&ev));} prop:value=pw /></div>
@@ -73,6 +73,15 @@ view!{
 
 
 #[component]
-fn LoggedIn()-> impl IntoView{
-view!{"Logged in"}
+fn LoggedIn(auth:ReadSignal<bool>,set_auth:WriteSignal<bool>)-> impl IntoView{
+view!{"Logged in"
+<button
+
+ on:click= move |_| {
+
+  set_auth(!auth.get());
+  }
+  >Log Out</button>
+
+}
 }
