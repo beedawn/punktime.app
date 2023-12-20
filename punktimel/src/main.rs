@@ -17,18 +17,25 @@ fn App() -> impl IntoView {
 
   let (auth, set_auth) = create_signal(false);
     view!{
+      <div>
+
  <Show
     when=move || auth.get() == false
     fallback=|| view! {  <LoggedIn />}
   >
-   <div style="position:absolute;
-    top:40%;
-    left:42%;
+   <div style="
+    width:350px;
+    height:550px;
+    padding:100px;
+      margin:auto;
 
-      "><Login auth=auth set_auth=set_auth />
+      ">
+
+<h1 style="font-family:sans-serif;">punktime</h1>
+      <Login auth=auth set_auth=set_auth />
  </div>
   </Show>
-            }
+         </div>   }
 
 
 }
@@ -37,13 +44,17 @@ fn App() -> impl IntoView {
 
 #[component]
 fn Login(auth:ReadSignal<bool>, set_auth:WriteSignal<bool>) -> impl IntoView {
-let (name, set_name) = create_signal("Controlled".to_string());
-let (pw, set_pw) = create_signal("spaghetti2".to_string());
+
+
+let (name, set_name) = create_signal(String::new());
+let (pw, set_pw) = create_signal(String::new());
 view!{
-   <div>Username:  <input type="text" on:input=move |ev| { set_name(event_target_value(&ev));} prop:value=name /></div>
+
+  <div style="height:125px;font-family:sans-serif;font-size:14px;padding:25px;border-width:5px;border:solid;">
+   <div style="padding:10px 15px">Username:  <input type="text" on:input=move |ev| { set_name(event_target_value(&ev));} prop:value=name /></div>
     
-   <div>Password:  <input type="text" on:input=move |ev| {set_pw(event_target_value(&ev));} prop:value=pw /></div>
-    
+   <div style="padding:10px 15px;">Password:  <input type="password" on:input=move |ev| {set_pw(event_target_value(&ev));} prop:value=pw /></div>
+   <div style="position:absolute;padding:10px 20px;left:40%;"> 
     <button on:click= move |_| {
 
   set_auth(!auth.get());
@@ -52,6 +63,8 @@ view!{
 
 
   }> Login </button>
+</div>
+  </div>
 }
 
 }
