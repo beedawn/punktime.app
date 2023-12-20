@@ -1,4 +1,6 @@
 use leptos::*;
+use reqwasm::http::Request;
+
 
 fn main() {
    mount_to_body(|| view!{ <App /> });
@@ -44,7 +46,7 @@ fn App() -> impl IntoView {
 
 #[component]
 fn Login(auth:ReadSignal<bool>, set_auth:WriteSignal<bool>) -> impl IntoView {
-
+println!("Hello");
 
 let (name, set_name) = create_signal(String::new());
 let (pw, set_pw) = create_signal(String::new());
@@ -60,8 +62,7 @@ view!{
   set_auth(!auth.get());
 
   //send credentials to server for validation
-
-
+send_get_request();
   }> Login </button>
 </div>
   </div>
@@ -74,6 +75,9 @@ view!{
 
 #[component]
 fn LoggedIn(auth:ReadSignal<bool>,set_auth:WriteSignal<bool>)-> impl IntoView{
+
+
+
 view!{"Logged in"
 <button
 
@@ -84,4 +88,31 @@ view!{"Logged in"
   >Log Out</button>
 
 }
+}
+
+
+
+
+async fn send_get_request() {
+    let url = "https://127.0.0.1:3000";
+
+    // Make a GET request
+    match Request::get(url).send().await {
+        Ok(res) => {
+            // Check if the response was successful (status code 2xx)
+            if res.status() >= 200 && res.status() < 300 {
+                // Print the response body
+                if let Ok(body) = res.text().await {
+                    println!("Response body: {}", body);
+                } else {
+                    println!("Failed to read response body");
+                }
+            } else {
+                println!("Request failed with status code: {}", res.status());
+            }
+        }
+        Err(e) => {
+            eprintln!("Error: {:?}", e);
+        }
+    }
 }
