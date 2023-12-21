@@ -94,13 +94,13 @@ view!{"Logged in"
 
 
 
-async fn send_get_request()-> Option<ReadableStream> {
+async fn send_get_request() {
   
     let url = "https://127.0.0.1:3000";
 
     // Make a GET request
     let resp = Request::get(url).send().await.unwrap();
 //resp.body().expect("Ruh roh.").to_string().into()
-Some(resp.text().await?)
+//Some(resp.text().await?)
 
 }

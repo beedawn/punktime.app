@@ -1,1 +1,0 @@
-Result<impl Future<Output = Result<std::string::String, reqwasm::Error>>, impl Future<Output = Result<std::string::String, reqwasm::Error>>>
