@@ -1,6 +1,6 @@
 use leptos::*;
 use reqwasm::http::Request;
-
+use reqwasm::http::ReadableStream;
 
 fn main() {
    mount_to_body(|| view!{ <App /> });
@@ -18,12 +18,13 @@ fn App() -> impl IntoView {
 
 
   let (auth, set_auth) = create_signal(false);
+  let (response_string, set_response_string) = create_signal(String::new());
     view!{
       <div>
 
  <Show
     when=move || auth.get() == false
-    fallback=move || view! {  <LoggedIn auth=auth set_auth=set_auth />}
+    fallback=move || view! {  <LoggedIn auth=auth set_auth=set_auth response_string=response_string set_response_string=set_response_string />}
   >
    <div style="
     width:350px;
@@ -34,7 +35,7 @@ fn App() -> impl IntoView {
       ">
 
 <h1 style="font-family:sans-serif;">punktime</h1>
-      <Login auth=auth set_auth=set_auth />
+      <Login auth=auth set_auth=set_auth response_string=response_string set_response_string=set_response_string  />
  </div>
   </Show>
          </div>   }
@@ -45,7 +46,7 @@ fn App() -> impl IntoView {
 
 
 #[component]
-fn Login(auth:ReadSignal<bool>, set_auth:WriteSignal<bool>) -> impl IntoView {
+fn Login(auth:ReadSignal<bool>, set_auth:WriteSignal<bool>, response_string:ReadSignal<String>, set_response_string:WriteSignal<String>) -> impl IntoView {
 println!("Hello");
 
 let (name, set_name) = create_signal(String::new());
@@ -62,7 +63,7 @@ view!{
   set_auth(!auth.get());
 
   //send credentials to server for validation
-send_get_request();
+//set_response_string.set(send_get_request());
   }> Login </button>
 </div>
   </div>
@@ -74,7 +75,7 @@ send_get_request();
 
 
 #[component]
-fn LoggedIn(auth:ReadSignal<bool>,set_auth:WriteSignal<bool>)-> impl IntoView{
+fn LoggedIn(auth:ReadSignal<bool>,set_auth:WriteSignal<bool>, response_string:ReadSignal<String>, set_response_string:WriteSignal<String> )-> impl IntoView{
 
 
 
@@ -86,33 +87,20 @@ view!{"Logged in"
   set_auth(!auth.get());
   }
   >Log Out</button>
-
+  <p>{response_string}</p>
 }
 }
 
 
 
 
-async fn send_get_request() {
+async fn send_get_request()-> Option<ReadableStream> {
+  
     let url = "https://127.0.0.1:3000";
 
     // Make a GET request
-    match Request::get(url).send().await {
-        Ok(res) => {
-            // Check if the response was successful (status code 2xx)
-            if res.status() >= 200 && res.status() < 300 {
-                // Print the response body
-                if let Ok(body) = res.text().await {
-                    println!("Response body: {}", body);
-                } else {
-                    println!("Failed to read response body");
-                }
-            } else {
-                println!("Request failed with status code: {}", res.status());
-            }
-        }
-        Err(e) => {
-            eprintln!("Error: {:?}", e);
-        }
-    }
+    let resp = Request::get(url).send().await.unwrap();
+//resp.body().expect("Ruh roh.").to_string().into()
+Some(resp.body()?)
+
 }
