@@ -101,6 +101,6 @@ async fn send_get_request()-> Option<ReadableStream> {
     // Make a GET request
     let resp = Request::get(url).send().await.unwrap();
 //resp.body().expect("Ruh roh.").to_string().into()
-Some(resp.body()?)
+Some(resp.text().await?)
 
 }
