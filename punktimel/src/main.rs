@@ -1,6 +1,5 @@
 use leptos::*;
-use reqwasm::http::Request;
-use reqwasm::http::ReadableStream;
+
 
 fn main() {
    mount_to_body(|| view!{ <App /> });
@@ -54,16 +53,14 @@ let (pw, set_pw) = create_signal(String::new());
 view!{
 
   <div style="height:125px;font-family:sans-serif;font-size:14px;padding:25px;border-width:3px;border:solid;">
-   <div style="padding:10px 15px">Username:  <input type="text" on:input=move |ev| { set_name(event_target_value(&ev));} prop:value=name /></div>
+   <div style="padding:10px 15px">Username:  <input type="text" on:input=move |ev| { set_name.set(event_target_value(&ev));} prop:value=name /></div>
     
-   <div style="padding:10px 15px;">Password:  <input type="password" on:input=move |ev| {set_pw(event_target_value(&ev));} prop:value=pw /></div>
+   <div style="padding:10px 15px;">Password:  <input type="password" on:input=move |ev| {set_pw.set(event_target_value(&ev));} prop:value=pw /></div>
    <div style="position:absolute;padding:10px 20px;left:40%;"> 
     <button on:click= move |_| {
 
-  set_auth(!auth.get());
+  set_auth.set(!auth.get());
 
-  //send credentials to server for validation
-//set_response_string.set(send_get_request());
   }> Login </button>
 </div>
   </div>
@@ -84,7 +81,7 @@ view!{"Logged in"
 
  on:click= move |_| {
 
-  set_auth(!auth.get());
+  set_auth.set(!auth.get());
   }
   >Log Out</button>
   <p>{response_string}</p>
@@ -94,13 +91,3 @@ view!{"Logged in"
 
 
 
-async fn send_get_request() {
-  
-    let url = "https://127.0.0.1:3000";
-
-    // Make a GET request
-    let resp = Request::get(url).send().await.unwrap();
-//resp.body().expect("Ruh roh.").to_string().into()
-//Some(resp.text().await?)
-
-}
