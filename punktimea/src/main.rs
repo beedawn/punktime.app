@@ -8,6 +8,12 @@ async fn hello() -> impl Responder {
     HttpResponse::Ok().body("Hello world!")
 }
 
+#[post("/login")]
+async fn login(req_body:String) -> impl Responder
+{
+HttpResponse::Ok().body(req_body)
+}
+
 #[post("/echo")]
 async fn echo(req_body: String) -> impl Responder {
     HttpResponse::Ok().body(req_body)
@@ -36,6 +42,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .wrap(cors)
             .service(hello)
+            .service(login)
             .service(echo)
             .route("/hey", web::get().to(manual_hello))
     })
