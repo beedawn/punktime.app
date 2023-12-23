@@ -1,9 +1,5 @@
-use leptos::{error::Result, *};
-use punktimel::*;
+use leptos::*;
+
 fn main() {
    mount_to_body(|| view!{ <punktimel::App /> });
 }
-
-
-
-
