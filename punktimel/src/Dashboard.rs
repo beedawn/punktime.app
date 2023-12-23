@@ -8,7 +8,7 @@ pub fn Dashboard(auth:ReadSignal<bool>,set_auth:WriteSignal<bool>)-> impl IntoVi
 view!{
     <div>
         <navbar::NavBar auth=auth set_auth=set_auth />
-        <apirequest::APIRequest />
+        <apirequest::APIRequest /> 
     </div>
     }
 }
