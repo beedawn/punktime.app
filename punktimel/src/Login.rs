@@ -1,9 +1,9 @@
-mod Login {
+use leptos::{error::Result, *};
 
 //returns Login component of a login box with username and password fields, 
 //as well as a login button
 #[component]
-fn Login(auth:ReadSignal<bool>, set_auth:WriteSignal<bool>, 
+pub fn Login(auth:ReadSignal<bool>, set_auth:WriteSignal<bool>, 
     response_string:ReadSignal<String>, 
     set_response_string:WriteSignal<String>) -> impl IntoView {
     let (name, set_name) = create_signal(String::new());
@@ -39,4 +39,3 @@ view!{
 
 
 
-}
