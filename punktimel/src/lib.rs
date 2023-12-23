@@ -75,7 +75,7 @@ async fn fetch_req() -> Result<String> {
   ))
     .send()
     .await?
-    // convert it to JSON
+    // convert it to text
     .text()
     .await?;
     // return response 
@@ -115,7 +115,7 @@ view!{
 
 #[component]
 fn APIRequest()-> impl IntoView {
-    let req = create_local_resource(move || (), |_| post_req());
+    let req = create_local_resource(move || (), |_| fetch_req());
     let fallback = move |errors: RwSignal<Errors>| {
       let error_list = move || {
           errors.with(|errors| {
