@@ -1,0 +1,11 @@
+/Users/bee/GitHub/punktime.app/punktimel/target/debug/deps/libgloo_net-299da9c939cdf528.rmeta: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/error.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/http/mod.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/http/headers.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/mod.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/events.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/futures.rs
+
+/Users/bee/GitHub/punktime.app/punktimel/target/debug/deps/gloo_net-299da9c939cdf528.d: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/error.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/http/mod.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/http/headers.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/mod.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/events.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/futures.rs
+
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/lib.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/error.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/http/mod.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/http/headers.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/mod.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/events.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/gloo-net-0.1.0/src/websocket/futures.rs:
