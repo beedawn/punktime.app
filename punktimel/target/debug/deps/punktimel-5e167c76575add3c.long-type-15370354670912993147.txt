@@ -1,0 +1,1 @@
+fn(leptos::ReadSignal<bool>, leptos::WriteSignal<bool>, leptos::ReadSignal<std::string::String>, leptos::WriteSignal<std::string::String>) -> impl leptos::IntoView {LoggedIn}
