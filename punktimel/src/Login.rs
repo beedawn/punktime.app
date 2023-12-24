@@ -30,7 +30,7 @@ view!{
         <div style="position:absolute;padding:10px 20px;left:40%;"> 
             //confirm button
             <button on:click= move |_| {
-            //need to add authenication feature this just toggles the auth boolean
+            //need to add authentication feature this just toggles the auth boolean
             
 
 let result = post_req();
@@ -46,17 +46,28 @@ let result = post_req();
 
 async fn post_req() -> Result<String, Error> {
     // make the request
-      let res = reqwasm::http::Request::post(&format!(
-        "http://127.0.0.1:3000/login",
-    ))
-      .send()
-      .await?
-      // convert it to JSON
-      .text()
-      .await?;
-      // return response 
-      Ok(res)
-  }
+    let res = reqwasm::http::Request::post(&"http://127.0.0.1:3000/login".to_string())
+        // set the body
+      //   .body(serde_json::json!({
+      //     "username": "test",
+      //     "password": "test",
+      // }))
+
+        .send()
+        .await?
+        // convert it to JSON
+        .text()
+        .await?;
+        // return response
+        Ok(res)
+        // send the request
+
+        // convert it to JSON
+
+
+    // return response
+
+}
 
 
 
