@@ -1,0 +1,1 @@
+leptos::leptos_dom::Component<{closure@src/login.rs:6:1: 6:13}, impl Future<Output = impl leptos::IntoView>>
